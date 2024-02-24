@@ -1,3 +1,11 @@
-              - name: Supabase CLI Action
-                uses: supabase/setup-cli@v1.3.0
-            
+name: Supabase CLI Action
+on:
+  pull_request:
+    types: [opened]
+permissions:setup-cli@v1.3.0
+  pull-requests: write
+jobs:
+  build:
+    name: Post welcome comment
+    runs-on: ubuntu-latest              
+             
